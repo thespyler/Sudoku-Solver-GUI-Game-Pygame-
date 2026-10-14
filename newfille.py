@@ -117,9 +117,7 @@ def generate(givens):
     return puzzle, full
 
 
-# --------------------------------------------------------------------------
-# GUI
-# --------------------------------------------------------------------------
+
 WIDTH, HEIGHT = 840, 700
 GRID_X, GRID_Y, CELL = 30, 70, 60
 GRID_SIZE = CELL * 9
@@ -186,7 +184,7 @@ class Game:
         self._build_buttons()
         self.new_game("Medium")
 
-    # ---------------------------------------------------------------- setup
+    # setup
     def _build_buttons(self):
         x, w, h, gap = PANEL_X, 210, 38, 8
         y = 150
@@ -360,7 +358,7 @@ class Game:
             else:
                 self.solver_cells.discard((r, c))
 
-    # --------------------------------------------------------------- input
+    # input
     def handle_key(self, event):
         k = event.key
         r, c = self.sel
@@ -523,11 +521,7 @@ class Game:
                     self.handle_key(event)
                 elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     self.handle_click(event.pos)
-            git
-            add.
-            git
-            commit - m
-            "Initial commit"
+
             if self.solving is not None:
                 self.step_solver()
             elif self.mode == "play" and not self.finished:
